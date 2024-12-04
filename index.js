@@ -210,11 +210,11 @@ app.post('/addbooks', async (req, res) => {
 
 
 //Adminehome page
-app.get('/AdminHome', async (req, res) => {
+app.get('/adminhome', async (req, res) => {
     try {
         const books = await bookmodel.find({})
         console.log(books)
-        return res.render('AdminHome', { books})
+        return res.render('adminhome', { books})
     }
     catch (err) {
         res.status(500).send("Error fetching book for update");
